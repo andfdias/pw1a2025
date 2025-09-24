@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>página display flex</title>
+    <style>
+        #primeira{
+            border:5px solid #FF0000;
+            background-color: #000000;
+            color: #FFFFFF;
+            height: 150px;
+            font-size: 70px;
+        }
+        #terceira{
+            background-color: #FFFF00;
+            border: 10px double #008800;
+            height: 300px;
+            padding: 50px;
+            margin: 50px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .subdiv{
+            background-color: #0000FF;
+            border: 10px solid #FF6500;
+            margin-bottom: 10px;
+            width: 200px;
+            height: 75px;
+        }
+    </style>
+</head>
+<h2>Display Flex</h2>
+<body>
+    <div id="primeira"> Primeira Div</div>
+    <div id="segunda">Segunda Div</div>
+    <div id="terceira">
+        <div class="subdiv">Sub Div 1</div>
+        <div class="subdiv">Sub Div 2</div> 
+        <div class="subdiv">Sub Div 3</div>
+    </div>
+</body>
+</html>
