@@ -11,9 +11,9 @@
             height: 100%;
             background-color: #666666;
             font-family: Arial, Helvetica, sans-serif;
-            display:flex;
+           /* display:flex;
             justify-content: center;
-            align-items: center;
+            align-items: center;*/
         }
         th{
            font-size: 40pt;
@@ -85,19 +85,63 @@
 </table>
 
 <script>
-var B = [] // 1-15
-var I = [] // 16-30
-var N = [] // 31-45
-var G = [] // 46-60
-var O = [] // 61-75
-var SORTEIO = []  //1-75
+var B =  PreencherLista(1, 15) // 1-15
+var I =  PreencherLista(16, 30) // 16-30
+var N =  PreencherLista(31, 45) // 31-45
+var G =  PreencherLista(46, 60) // 46-60
+var O =  PreencherLista(61, 75) // 61-75
+var SORTEIO =  PreencherLista(1, 75)  //1-75
 
-for(var i = 1; i<76; i++)
+//for(var i = 1; i<76; i++)
+// {
+//     SORTEIO.push(i)
+// }
+
+function PreencherLista(inicial, final)
 {
-    SORTEIO.push(i)
+    var listaRetorno = []
+    for (var i = inicial; i <=final; i++) {
+        listaRetorno.push(i)
+    }
+    return listaRetorno
+
+}
+/*
+function ParOuImpar(numero)
+{
+    if (numero % 2 == 0){
+        return "Par"
+    } else {
+        return "Impar"
+    }
+}
+*/
+function ExibirListas(Lista)
+{
+    document.write("<h1>"+Lista+"</h1>")
+
+}
+
+function ExibirListasDetalhada(Lista)
+{
+    for (var i = 0; i < Lista.length; i++)
+    {
+    document.write("<h1>"+Lista[i]+"</h1>")
+    }
+    
 }
 
 
+ExibirListasDetalhada(B)
+ExibirListasDetalhada(I)
+ExibirListasDetalhada(N)
+ExibirListasDetalhada(G)
+ExibirListasDetalhada(O)
+ExibirListasDetalhada(SORTEIO)
+
+// document.write("<h1>"+ParOuImpar(50)+"</h1>")
+
+/*
 for(var i = 1; i<= 15; i++)
 {
     B.push(i)
@@ -137,10 +181,10 @@ for(var i = 61; i<= 75; i++)
 for(var i = 0; i< 15; i++) 
 {
     if(N[i]% 2 == 0)
-    document.write("O numero é: "+N[i]+"<br>")
+   // document.write("O numero é: "+N[i]+"<br>")
 
 }
-
+*/
 
 </script>
 
