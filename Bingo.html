@@ -47,39 +47,39 @@
     </thead>
     <tbody>
         <tr>
-        <td>11</td><!--coluna B-->
-        <td>24</td><!--coluna I-->
-        <td>40</td><!--coluna N-->
-        <td>60</td><!--coluna G-->
-        <td>62</td><!--coluna O-->
+        <td onclick="Marcar(this)">11</td><!--coluna B-->
+        <td onclick="Marcar(this)">24</td><!--coluna I-->
+        <td onclick="Marcar(this)">40</td><!--coluna N-->
+        <td onclick="Marcar(this)">60</td><!--coluna G-->
+        <td onclick="Marcar(this)">62</td><!--coluna O-->
         </tr>
         <tr>
-        <td>09</td><!--coluna B-->
-        <td>26</td><!--coluna I-->
-        <td>41</td><!--coluna N-->
-        <td>47</td><!--coluna G-->
-        <td>63</td><!--coluna O-->
+        <td onclick="Marcar(this)">09</td><!--coluna B-->
+        <td onclick="Marcar(this)">26</td><!--coluna I-->
+        <td onclick="Marcar(this)">41</td><!--coluna N-->
+        <td onclick="Marcar(this)">47</td><!--coluna G-->
+        <td onclick="Marcar(this)">63</td><!--coluna O-->
         </tr>
         <tr>
-        <td>01</td><!--coluna B-->
-        <td>30</td><!--coluna I-->
-        <td><img src="imagens/images.jpg" width="50"/></td><!--coluna N-->
-        <td>48</td><!--coluna G-->
-        <td>69</td><!--coluna O-->
+        <td onclick="Marcar(this)">01</td><!--coluna B-->
+        <td onclick="Marcar(this)">30</td><!--coluna I-->
+        <td onclick="Marcar(this)"><img src="imagens/images.jpg" width="50"/></td><!--coluna N-->
+        <td onclick="Marcar(this)">48</td><!--coluna G-->
+        <td onclick="Marcar(this)">69</td><!--coluna O-->
         </tr>   
         <tr>
-        <td>15</td><!--coluna B-->
-        <td>17</td><!--coluna I-->
-        <td>31</td><!--coluna N-->
-        <td>54</td><!--coluna G-->
-        <td>71</td><!--coluna O-->
+        <td onclick="Marcar(this)">15</td><!--coluna B-->
+        <td onclick="Marcar(this)">17</td><!--coluna I-->
+        <td onclick="Marcar(this)">31</td><!--coluna N-->
+        <td onclick="Marcar(this)">54</td><!--coluna G-->
+        <td onclick="Marcar(this)">71</td><!--coluna O-->
         </tr>
         <tr>
-        <td>07</td><!--coluna B-->
-        <td>18</td><!--coluna I-->
-        <td>33</td><!--coluna N-->
-        <td>56</td><!--coluna G-->
-        <td>75</td><!--coluna O-->
+        <td onclick="Marcar(this)">07</td><!--coluna B-->
+        <td onclick="Marcar(this)">18</td><!--coluna I-->
+        <td onclick="Marcar(this)">33</td><!--coluna N-->
+        <td onclick="Marcar(this)">56</td><!--coluna G-->
+        <td onclick="Marcar(this)">75</td><!--coluna O-->
         </tr>
     </tbody>
 </table>
@@ -91,6 +91,40 @@ var N =  PreencherLista(31, 45) // 31-45
 var G =  PreencherLista(46, 60) // 46-60
 var O =  PreencherLista(61, 75) // 61-75
 var SORTEIO =  PreencherLista(1, 75)  //1-75
+
+
+
+function Marcar(elementoClicado)
+{
+    /*elementoClicado.innerText
+    elementoClicado.innerHTML = "<h1>Anderson</h1>"
+   if(elementoClicado.style.backgroundColor == "blue")
+   {
+    elementoClicado.style.backgroundColor = "white"
+   }
+   else
+   {
+    elementoClicado.style.backgroundColor = "blue"
+   }*/
+elementoClicado.innerText = NumeroAleatorio()
+
+}
+//NumeroAleatorio()
+
+function NumeroAleatorio(min, max)
+{
+     var numero = Math.random() * max
+     numero = Math.floor(numero)
+     if(numero>= min)
+     {
+     return numero
+     }else
+     {
+        return NumeroAleatorio(min, max)
+     }
+}
+
+
 
 //for(var i = 1; i<76; i++)
 // {
