@@ -85,6 +85,40 @@
 </table>
 
 <script>
+
+
+
+function ParOuImpar(numero)
+{
+    if (numero % 2 == 0){
+        return "Par"
+    } else {
+        return "Impar"
+    }
+}
+
+function ExibirListas(Lista)
+{
+    for(var i = 0; i < Lista.length; i++)
+{
+    if (ParOuImpar(Lista[i]) == "Par")
+    {
+    document.write("<h1>"+Lista[i]+"</h1>")
+    }
+}    
+}
+
+function PreencherLista(inicial, final)
+{
+    var listaRetorno = []
+    for (var i = inicial; i <= final; i++) {
+        listaRetorno.push(i)
+    }
+    return listaRetorno
+}
+
+
+
 var B =  PreencherLista(1, 15) // 1-15
 var I =  PreencherLista(16, 30) // 16-30
 var N =  PreencherLista(31, 45) // 31-45
@@ -92,159 +126,23 @@ var G =  PreencherLista(46, 60) // 46-60
 var O =  PreencherLista(61, 75) // 61-75
 var SORTEIO =  PreencherLista(1, 75)  //1-75
 
+ExibirListas(B)
+ExibirListas(I)
+ExibirListas(N)
+ExibirListas(G)
+ExibirListas(O)
+ExibirListas(SORTEIO)
 
-/*
-function Marcar(elementoClicado)
-{
-    /*elementoClicado.innerText
-    elementoClicado.innerHTML = "<h1>Anderson</h1>"
-   if(elementoClicado.style.backgroundColor == "blue")
-   {
-    elementoClicado.style.backgroundColor = "white"
-   }
-   else
-   {
-    elementoClicado.style.backgroundColor = "blue"
-   }
-elementoClicado.innerText = NumeroAleatorio()
-
-}
-//NumeroAleatorio()
-
-function NumeroAleatorio(min, max)
-{
-     var numero = Math.random() * max
-     numero = Math.floor(numero)
-     if(numero>= min)
-     {
-     return numero
-     }else
-     {
-        return NumeroAleatorio(min, max)
-     }
-}
-
-
-
-//for(var i = 1; i<76; i++)
-// {
-//     SORTEIO.push(i)
-// }
-
-function PreencherLista(inicial, final)
-{
-    var listaRetorno = []
-    for (var i = inicial; i <=final; i++) {
-        listaRetorno.push(i)
-    }
-    return listaRetorno
-
-}
-*/
-
-
-/*
-function ExibirListas(Lista)
-{
-    document.write("<h1>"+Lista+"</h1>")
-
-}
-*/
-function ExibirListasDetalhada(Lista)
-{
-    for (var i = 0; i < Lista.length; i++)
-    {
-    document.write("<h1>"+Lista[i]+"</h1>")
-    }
-    
-}
-
-
-ExibirListasDetalhada(B)
-ExibirListasDetalhada(I)
-ExibirListasDetalhada(N)
-ExibirListasDetalhada(G)
-ExibirListasDetalhada(O)
-ExibirListasDetalhada(SORTEIO)
-
-for(var i = 1; i <= 75; i++)  function ParOuImpar(numero)
-{
-    if (numero % 2 == 0){
-        return "Par"
-    } else {
-        return "Impar"
-    }
-}
-
-
-/*
-for(var i = 1; i<= 15; i++)
-{
-    B.push(i)
-}
-
-//document.write("<h1>"+ B[0]+ " </h1>")
-
-for(var i = 16; i< 30; i++) function ParOuImpar(numero)
-{
-    if (numero % 2 == 0){
-        return "Par"
-    } else {
-        return "Impar"
-    }
-}function ParOuImpar(numero)
-{
-    if (numero % 2 == 0){
-        return "Par"
-    } else {
-        return "Impar"
-    }
-}function ParOuImpar(numero)
-{
-    if (numero % 2 == 0){
-        return "Par"
-    } else {
-        return "Impar"
-    }
-}
-   I.push(i)
-
-}
-//document.write("<h1>"+ I[0]+ " </h1>")
-
-
-for(var i = 31; i<= 45; i++)
-{
-    N.push(i)
-}
-
-//document.write("<h1>"+ N[0]+ " </h1>")
-
-for(var i = 46; i<= 60; i++)
-{
-    G.push(i)
-}
-
-//document.write("<h1>"+ G[0]+ " </h1>")
-
-for(var i = 61; i<= 75; i++)
-{
-    O.push(i)
-}
-
-//document.write("<h1>"+ O[0]+ " </h1>")
-
-for(var i = 0; i< 15; i++) 
-{
-    if(N[i]% 2 == 0)
-   // document.write("O numero é: "+N[i]+"<br>")
-
-}
-*/
 
 </script>
-
-
-
 </body>
 </html>
+
+
+
+
+
+
+
+
+
