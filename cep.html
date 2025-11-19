@@ -35,7 +35,18 @@
             var cidade = document.getElementById("cidade")
             var estado = document.getElementById("estado")
 
-            estado.value =""
+            var url = "https://viacep.com.br/ws/"+cep.value+"/json/"
+
+            fetch(url)
+            .then(  (response)=> response.json())
+            .then(  (dados) => {
+                endereco.value = dados.logradouro
+                bairro.value = dados.bairro
+                cidade.value = dados.localidade
+                estado.value = dados.estado
+            })    
+
+           /* estado.value =""
             cidade.style.backgroundColor = 'red'
             bairro.style.border = '2px solid blue'
             endereco.type = 'number'
@@ -60,6 +71,7 @@
 
            // cep.style.width = '350px'
             //cep.style.height = '250px'
+            */
         }
     </script>
 
