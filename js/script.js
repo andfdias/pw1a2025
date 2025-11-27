@@ -3,7 +3,7 @@ const pokemonNumber = document.querySelector('.pokemon_number');
 const pokemonImage = document.querySelector('.pokemon_image');
 const form = document.querySelector('.form');
 const input = document.querySelector('.input_search');
-
+const form = document.querySelector('.informação');
 
 const fetchPokemon =  async (pokemon) => {
 
