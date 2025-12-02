@@ -3,16 +3,16 @@ const pokemonNumber = document.querySelector('.pokemon_number');
 const pokemonImage = document.querySelector('.pokemon_image');
 const form = document.querySelector('.form');
 const input = document.querySelector('.input_search');
-
+const form = document.querySelector('.informação');
 
 const fetchPokemon =  async (pokemon) => {
 
     const APIresponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.toLowerCase()}`);
 
-   
+    const data = await APIresponse.json();
 
-    if (APIresponse.status == 200){
-        
+   return data;
+
 
     const data = await APIresponse.json();  
     return data;
@@ -41,13 +41,9 @@ const renderPokemon = async (pokemon) => {
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
-
+    
     renderPokemon(input.value);
     
- 
-});
-
-renderPokemon('1')
 
 
 

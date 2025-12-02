@@ -42,7 +42,7 @@ main {
     color: white;
     top:54.5%;
     right:27%;
-    font-size:clamp(8px, 5vw, 25px);
+    font-size:clamp(8px, 5vw, 20px);
     
 }
 .pokemon_name {
@@ -53,9 +53,9 @@ main {
 }
 .form {
     position: absolute;
-    background-color: red;
+    background-color: ;
     width: 65%;
-    top:65%;
+    top:70%;
     left: 13.5%;
    
 }
@@ -72,6 +72,30 @@ main {
     box-shadow: -3px 4px 0 #333, -5px 7px 0 #4498f8;
 
 }
+
+.form_type {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    font-weight: 600;
+    color: white;
+
+}
+.input_pokemon {
+    width: 80%;
+    padding: 1%;
+    font-weight: 600;
+    color: white;
+    font-size: clamp(8px, 5vw, 1rem);
+    border: 2px solid #333;
+    border-radius: 3px;
+    box-shadow: -3px 3px 0 #333, -4px 6px 0 #4498f8;
+    
+}
+
+
+
 .buttons {
     position: absolute;
     bottom: 10%;
