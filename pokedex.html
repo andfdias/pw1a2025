@@ -1,43 +1,46 @@
   <!DOCTYPE html>
   <html lang="pt-br">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="icon"  href="./favicons/favicon-16x16.png">
-    <link rel="stylesheet" href="./css/pokedex.css">
-
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon"  href="./favicons/favicon-16x16.png"/>
+    <link rel="stylesheet" href="./css/pokedex.css"/>
     <script defer src="./js/script.js"></script>
 
     <title>Pokédex</title>
   </head>
   <body>
     
-    <main>
+    <main class="container">
       <img src="#" alt="pokemon" class="pokemon_image">
 
-         <h1 class="pokemon_data">
+      <header class="pokemon_header">
+        <h1 class="pokemon_data">
             <span class="pokemon_number"></span> -
             <span class="pokemon_name"></span>
-            <span class="pokemon_type"></span>
+            
+        </h1>
+       
+      </header>
+      
 
-      </h1>
-
-         <form class="form">
+      <form class="form">
             
             <input type="search"
              class="input_search"
              placeholder="Nome ou número do Pokémon"
             required 
             />
-        </form> 
-        <form class="form_type">
-            <input type="pokemon"
-              class="input_pokemon"
-              placeholder="Tipo do Pokémon"
+      </form> 
+      <form class="form_type">
+          <p class="pokemon_type" aria-live="polite"></p>
+            <input type="text"
+              class="input_type"
+              
               required
             />
-        </form>
+        
+      </form>
           
 
     <div class="buttons">
@@ -52,3 +55,4 @@
 
   </body>
   </html>
+  

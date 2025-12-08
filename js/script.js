@@ -1,9 +1,8 @@
 const pokemonName = document.querySelector('.pokemon_name');
 const pokemonNumber = document.querySelector('.pokemon_number');
 const pokemonImage = document.querySelector('.pokemon_image');
-const formtype = document.querySelector('.form_type');
+const formtype = document.querySelector('.pokemon_type');
 const inputtype = document.querySelector('.input_pokemon');
-
 const form = document.querySelector('.form');
 const input = document.querySelector('.input_search');
 const buttonPrev = document.querySelector('.btn-prev');
@@ -30,8 +29,8 @@ const fetchPokemon =  async (pokemon) => {
 
 const renderPokemon = async (pokemon) => {
     pokemonName.innerHTML = 'loading...';
-    pokemonName.innerHTML = 'loading...';
-    inputtype.innerHTML = 'loading...';
+    pokemonNumber.innerHTML = 'loading...';
+    formtype.innerHTML = 'loading...';
     const data = await fetchPokemon(pokemon);
 
 
@@ -41,20 +40,27 @@ const renderPokemon = async (pokemon) => {
     pokemonImage.style.display = 'block';   
     pokemonName.innerHTML = data.name;
     pokemonNumber.innerHTML = data.id;
-    inputtype.innerHTML = data.types['0']['type']['name'];
     pokemonImage.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
+
+
+    formtype.innerHTML = data.types.map((type) => type.type.name).join(', ');;
+    
     input.value = '';
     searchPokemon = data.id;
+
+   
 
     } else {
         pokemonImage.style.display = 'none';
         pokemonName.innerHTML = 'Not found ';
         pokemonNumber.innerHTML = '';
-        inputtype.innerHTML = '';
+        formtype.innerHTML = '';
 
     }
 }
 
+
+   
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
